@@ -6,10 +6,10 @@ export const Header = () => {
 	return (
 		<header
 			id="header"
-			className="absolute top-0 left-0 right-0 z-50 bg-secondary"
+			className="absolute top-0 left-0 right-0 z-50 bg-secondary px-4"
 		>
 			<TopHeader />
-			<div className="max-w-5xl mx-auto flex items-center relative">
+			<div className="max-w-7xl mx-auto flex items-center relative">
 				<HeaderLogo className="hidden lg:flex lg:items-center h-full" />
 				<Nav />
 			</div>

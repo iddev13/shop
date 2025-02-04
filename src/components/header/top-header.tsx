@@ -12,12 +12,12 @@ export const TopHeader = () => {
 	const { onOpen } = useOpenMobileNav();
 	return (
 		<div className="py-1">
-			<div className="max-w-5xl w-full mx-auto flex items-center justify-between">
-				<div className="relative h-7 flex items-center justify-between  gap-x-1 lg:gap-x-4 flex-auto pr-2 ">
+			<div className="max-w-7xl w-full mx-auto flex items-center justify-between">
+				<div className="relative h-7 flex items-center justify-between  gap-x-1 lg:gap-x-4 flex-auto ">
 					<HeaderContacts />
 					<div className="flex items-center">
 						<ThemeToggle />
-						<Social className="mr-2" />
+						<Social className="mr-2 lg:mr-0" />
 						<div className="flex items-center justify-center lg:hidden">
 							<Button
 								asChild
