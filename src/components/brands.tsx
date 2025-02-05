@@ -6,8 +6,8 @@ import { Zara } from './icons/brands/zara';
 
 export const Brands = () => {
 	return (
-		<div className="bg-secondary-foreground py-12">
-			<div className="flex items-center justify-center lg:justify-between gap-8 lg:gap-24 max-w-7xl mx-auto [&_svg]:fill-primary-foreground">
+		<div className="bg-secondary-foreground py-12 px-4">
+			<div className="flex items-center justify-center flex-wrap gap-8 lg:gap-24 max-w-7xl mx-auto [&_svg]:fill-primary-foreground">
 				<Versace className="w-[117px] h-[24] lg:w-[167px] lg:h-[34]" />
 				<Zara className="w-[64px] h-[27] lg:w-[91px] lg:h-[38]" />
 				<Gucci className="w-[110px] h-[25] lg:w-[156px] lg:h-[36]" />
