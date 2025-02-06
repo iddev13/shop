@@ -4,6 +4,7 @@ import { Btn } from '@/components/btn';
 import { ShopCard } from '@/components/cards/shop-card';
 import { CustomCarouselV2 } from '@/components/custom-carousel-v2';
 import { Section } from '@/components/section';
+import { arrivalsData, arrivalsSliderData } from '@/constants';
 import { useMedia } from 'react-use';
 
 export const Arrivals = () => {
@@ -12,18 +13,22 @@ export const Arrivals = () => {
 		<Section title="NEW ARRIVALS" className="border-b">
 			<>
 				{!isMobile && (
-					<div className="grid grid-cols-4 gap-5 px-2 mb-4 lg:mb-10">
-						<ShopCard
-							imageUrl="/assets/image/intro/intro-image.png"
-							price={120}
-							oldPrice={260}
-							title="T-shirt with tape details"
-							rate={3.6}
-							discount={50}
-						/>
+					<div className="flex items-center gap-5 px-2 mb-4 lg:mb-10 justify-around">
+						{arrivalsData.map((card) => (
+							<ShopCard
+								key={card.id}
+								href={card.href}
+								imageUrl={card.imageUrl}
+								price={card.price}
+								oldPrice={card.oldPrice}
+								title={card.title}
+								rate={card.rate}
+								discount={card.discount}
+							/>
+						))}
 					</div>
 				)}
-				{isMobile && <CustomCarouselV2 />}
+				{isMobile && <CustomCarouselV2 data={arrivalsSliderData} />}
 			</>
 			<div className="flex items-center justify-center px-4">
 				<Btn label="View All" variant="outline" className="w-full sm:w-auto" />

@@ -3,7 +3,6 @@ import { FacebookIcon } from "@/components/icons/facebook";
 import { InstagramIcon } from "@/components/icons/instagram";
 import { XIcon } from "@/components/icons/x";
 import { GoogleIcon } from "@/components/icons/google";
-import { GithubIcon } from "@/components/icons/github";
 import { cn } from "@/lib/utils";
 
 type SocialType = {
@@ -27,7 +26,6 @@ export const Social = ({ className }: SocialType) => {
           {elem.label === "instagram" && <InstagramIcon />}
           {elem.label === "twitter" && <XIcon />}
           {elem.label === "google" && <GoogleIcon />}
-          {elem.label === "github" && <GithubIcon />}
         </a>
       </li>
     );

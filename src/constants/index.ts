@@ -1,3 +1,4 @@
+import { ShopCardType } from '@/types/cards';
 import { NavItemType, SocialLinkType } from '@/types/header';
 import {
 	BadgeDollarSign,
@@ -7,6 +8,7 @@ import {
 	Pocket,
 } from 'lucide-react';
 
+// Header data
 export const menuItems: NavItemType[] = [
 	{
 		id: 1,
@@ -139,6 +141,7 @@ export const menuItems: NavItemType[] = [
 	},
 ];
 
+// Header data
 export const socialLinks: SocialLinkType[] = [
 	{
 		id: 1,
@@ -164,10 +167,194 @@ export const socialLinks: SocialLinkType[] = [
 		label: 'google',
 		imageUrl: '/assets/image/icons/youtube.svg',
 	},
+];
+
+// Arrivals section data
+export const arrivalsData: ShopCardType[] = [
+	{
+		id: 1,
+		href: '/',
+		imageUrl: '/assets/image/shirts/1.png',
+		title: 'T-shirt with tape details',
+		rate: 4.5,
+		price: 120,
+	},
+	{
+		id: 2,
+		href: '/',
+		imageUrl: '/assets/image/jeans/1.png',
+		title: 'skinny fit jeans',
+		rate: 3.5,
+		price: 240,
+		oldPrice: 260,
+		discount: 20,
+	},
+	{
+		id: 3,
+		href: '/',
+		imageUrl: '/assets/image/shirts/5.png',
+		title: 'Checkered shirt',
+		rate: 4,
+		price: 180,
+	},
+	{
+		id: 4,
+		href: '/',
+		imageUrl: '/assets/image/shirts/3.png',
+		title: 'SLEEVE STRIPED T-SHIRT',
+		rate: 4.5,
+		price: 130,
+		oldPrice: 160,
+		discount: 30,
+	},
+];
+
+// Arrivals section slider data
+export const arrivalsSliderData: ShopCardType[] = [
+	{
+		id: 1,
+		href: '/',
+		imageUrl: '/assets/image/shirts/1.png',
+		title: 'T-shirt with tape details',
+		rate: 4.5,
+		price: 120,
+	},
+	{
+		id: 2,
+		href: '/',
+		imageUrl: '/assets/image/jeans/1.png',
+		title: 'skinny fit jeans',
+		rate: 3.5,
+		price: 240,
+		oldPrice: 260,
+		discount: 20,
+	},
+	{
+		id: 3,
+		href: '/',
+		imageUrl: '/assets/image/shirts/5.png',
+		title: 'Checkered shirt',
+		rate: 4,
+		price: 180,
+	},
+	{
+		id: 4,
+		href: '/',
+		imageUrl: '/assets/image/shirts/3.png',
+		title: 'SLEEVE STRIPED T-SHIRT',
+		rate: 4.5,
+		price: 130,
+		oldPrice: 160,
+		discount: 30,
+	},
 	{
 		id: 5,
 		href: '/',
-		label: 'github',
-		imageUrl: '/assets/image/icons/youtube.svg',
+		imageUrl: '/assets/image/shirts/9.png',
+		title: 'T-shirt with tape details',
+		rate: 3,
+		price: 120,
+	},
+	{
+		id: 6,
+		href: '/',
+		imageUrl: '/assets/image/jeans/2.png',
+		title: 'skinny fit jeans',
+		rate: 3.5,
+		price: 240,
+		oldPrice: 260,
+		discount: 20,
+	},
+	{
+		id: 7,
+		href: '/',
+		imageUrl: '/assets/image/shirts/6.png',
+		title: 'Checkered shirt',
+		rate: 4.5,
+		price: 180,
+	},
+	{
+		id: 8,
+		href: '/',
+		imageUrl: '/assets/image/shirts/7.png',
+		title: 'SLEEVE STRIPED T-SHIRT',
+		rate: 4.5,
+		price: 130,
+		oldPrice: 160,
+		discount: 30,
+	},
+];
+
+// Arrivals section slider data
+export const topSellingSliderData: ShopCardType[] = [
+	{
+		id: 1,
+		href: '/',
+		imageUrl: '/assets/image/shirts/8.png',
+		title: 'vertical striped shirt',
+		rate: 5.0,
+		price: 212,
+		oldPrice: 232,
+		discount: 20,
+	},
+	{
+		id: 2,
+		href: '/',
+		imageUrl: '/assets/image/shirts/9.png',
+		title: 'courage graphic t-shirt',
+		rate: 3.0,
+		price: 145,
+	},
+	{
+		id: 3,
+		href: '/',
+		imageUrl: '/assets/image/jeans/2.png',
+		title: 'loose fit bermuda shorts',
+		rate: 4,
+		price: 80,
+	},
+	{
+		id: 4,
+		href: '/',
+		imageUrl: '/assets/image/jeans/3.png',
+		title: 'sleeve striped t-shirt',
+		rate: 4.5,
+		price: 210,
+	},
+	{
+		id: 5,
+		href: '/',
+		imageUrl: '/assets/image/shirts/9.png',
+		title: 'T-shirt with tape details',
+		rate: 3,
+		price: 120,
+	},
+	{
+		id: 6,
+		href: '/',
+		imageUrl: '/assets/image/jeans/2.png',
+		title: 'skinny fit jeans',
+		rate: 3.5,
+		price: 240,
+		oldPrice: 260,
+		discount: 20,
+	},
+	{
+		id: 7,
+		href: '/',
+		imageUrl: '/assets/image/shirts/6.png',
+		title: 'Checkered shirt',
+		rate: 4.5,
+		price: 180,
+	},
+	{
+		id: 8,
+		href: '/',
+		imageUrl: '/assets/image/shirts/7.png',
+		title: 'SLEEVE STRIPED T-SHIRT',
+		rate: 4.5,
+		price: 130,
+		oldPrice: 160,
+		discount: 30,
 	},
 ];

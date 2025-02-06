@@ -5,13 +5,14 @@ import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 type Props = {
+	value: number;
 	isEditing?: boolean;
 	className?: string;
 };
 
-export const Rating = ({ isEditing, className }: Props) => {
+export const Rating = ({ value, isEditing, className }: Props) => {
 	const ratingRef = useRef<HTMLDivElement>(null);
-	const [ratingValue, setRatingValue] = useState<number>(3.6);
+	const [ratingValue, setRatingValue] = useState<number>(value);
 	const [selectedHoverStarCount, setSelectedHoverStarCount] =
 		useState<number>(0);
 
@@ -32,7 +33,7 @@ export const Rating = ({ isEditing, className }: Props) => {
 
 	return (
 		<div ref={ratingRef} className={cn('flex items-end text-2xl', className)}>
-			<div className="relative before:content-['★★★★★']">
+			<div className="relative before:content-['★★★★★'] text-secondary">
 				<div className="rating__active absolute w-0 h-full top-0 left-0 overflow-hidden after:content-['★★★★★'] after:absolute after:w-full  after:h-full after:top-0 after:left-0 after:text-amber-300"></div>
 				<div className="flex absolute w-full h-full top-0 left-0">
 					{[...Array(5)].map((_, index) => {
@@ -43,7 +44,7 @@ export const Rating = ({ isEditing, className }: Props) => {
 								name="rating"
 								key={index}
 								className={cn(
-									'cursor-pointer basis-1/5 h-full opacity-0',
+									'cursor-pointer basis-1/5 h-full opacity-0 ',
 									index + 1 <= selectedHoverStarCount && 'text-amber-500'
 								)}
 								onClick={() => {
