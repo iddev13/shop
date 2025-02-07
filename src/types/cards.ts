@@ -8,3 +8,11 @@ export type ShopCardType = {
 	oldPrice?: number;
 	discount?: number;
 };
+
+export type StyleCardType = {
+	id?: number;
+	href: string;
+	label: string;
+	imageUrl: string;
+	size?: 'default' | 'large';
+};

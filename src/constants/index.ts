@@ -1,4 +1,4 @@
-import { ShopCardType } from '@/types/cards';
+import { ShopCardType, StyleCardType } from '@/types/cards';
 import { NavItemType, SocialLinkType } from '@/types/header';
 import {
 	BadgeDollarSign,
@@ -356,5 +356,35 @@ export const topSellingSliderData: ShopCardType[] = [
 		price: 130,
 		oldPrice: 160,
 		discount: 30,
+	},
+];
+
+// Style section data
+export const styleData: StyleCardType[] = [
+	{
+		id: 1,
+		href: '/',
+		label: 'Casual',
+		imageUrl: '/assets/image/style/11.png',
+	},
+	{
+		id: 2,
+		href: '/',
+		label: 'Formal',
+		imageUrl: '/assets/image/style/14.png',
+		size: 'large',
+	},
+	{
+		id: 3,
+		href: '/',
+		label: 'Party',
+		imageUrl: '/assets/image/style/12.png',
+	},
+	{
+		id: 4,
+		href: '/',
+		label: 'Gym',
+		imageUrl: '/assets/image/style/13.png',
+		size: 'large',
 	},
 ];
