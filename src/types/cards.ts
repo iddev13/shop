@@ -16,3 +16,11 @@ export type StyleCardType = {
 	imageUrl: string;
 	size?: 'default' | 'large';
 };
+
+export type ReviewsCardType = {
+	id?: number;
+	rating: number;
+	author: string;
+	text: string;
+	date?: string;
+};

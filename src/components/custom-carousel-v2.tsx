@@ -20,30 +20,20 @@ export const CustomCarouselV2 = ({
 	data: ShopCardType[];
 }) => {
 	const [api, setApi] = useState<CarouselApi>();
-	// const [{}, setCurrent] = useState<number>(0);
 
 	useEffect(() => {
-		if (!api) {
-			return;
-		}
-		// setCurrent(api.selectedScrollSnap());
+		if (!api) return;
 
-		api.on('select', () => {
-			// setCurrent(api.selectedScrollSnap());
-		});
+		api.on('select', () => {});
 	}, [api]);
 
 	return (
 		<div className={cn('mb-8 pl-4', className)}>
-			<Carousel
-				setApi={setApi}
-				opts={{ align: 'start' }}
-				className="w-full overflow-visible"
-			>
-				<CarouselContent className="overflow-visible">
+			<Carousel setApi={setApi} opts={{ align: 'start' }}>
+				<CarouselContent>
 					{data.map((slide) => (
 						<CarouselItem
-							className="min-w-[215px] flex-grow basis-1/2 sm:basis-1/3  md:basis-1/4 overflow-hidden rounded-md"
+							className="min-w-[215px] flex-grow basis-1/2 sm:basis-1/3  md:basis-1/4 overflow-hidden rounded-md cursor-grab active:cursor-grabbing"
 							key={slide.id}
 						>
 							<ShopCard

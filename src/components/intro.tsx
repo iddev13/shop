@@ -11,7 +11,7 @@ export const Intro = () => {
 		<div className="mb-12 lg:mb-18">
 			<div className="flex flex-col lg:flex-row items-center max-w-7xl w-full mx-auto justify-between px-4 lg:pt-12">
 				<div className="space-y-5 lg:space-y-8">
-					<h1 className="max-w-[580px] text-5xl">
+					<h1 className="max-w-[580px] text-4xl lg:text-6xl">
 						FIND CLOTHES THAT MATCHES YOUR STYLE
 					</h1>
 					<p className="max-w-[580px]">
