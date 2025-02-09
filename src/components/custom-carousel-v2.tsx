@@ -8,9 +8,9 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from '@/components/ui/carousel';
-import { cn } from '@/lib/utils';
-import { ShopCard } from './cards/shop-card';
+import { ShopCard } from '@/components/cards/shop-card';
 import { ShopCardType } from '@/types/cards';
+import { cn } from '@/lib/utils';
 
 export const CustomCarouselV2 = ({
 	className,

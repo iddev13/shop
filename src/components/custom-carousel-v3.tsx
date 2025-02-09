@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { MoveLeft, MoveRight } from 'lucide-react';
 
 import { type CarouselApi } from '@/components/ui/carousel';
 import {
@@ -9,10 +10,9 @@ import {
 	CarouselItem,
 } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import { reviewsData } from '@/constants';
-import { ReviewsCard } from './cards/reviews-card';
-import { MoveLeft, MoveRight } from 'lucide-react';
+import { ReviewsCard } from '@/components/cards/reviews-card';
+import { cn } from '@/lib/utils';
 
 export const CustomCarouselV3 = ({ className }: { className?: string }) => {
 	const [api, setApi] = useState<CarouselApi>();
@@ -33,7 +33,7 @@ export const CustomCarouselV3 = ({ className }: { className?: string }) => {
 			<Carousel
 				setApi={setApi}
 				opts={{ loop: true, align: 'center' }}
-				className='max-w-[1920px] w-full mx-auto overflow-hidden relative before:block before:content-[""] xl:before:w-[105px] 2xl:before:w-[335px] before:h-full before:bg-transparent before:absolute before:top-0 before:-left-1 before:backdrop-blur-sm before:z-50 before:rounded-2xl after:block after:content-[""] xl:after:w-[105px] 2xl:after:w-[335px] after:h-full after:transparent after:absolute after:top-0 after:-right-1 after:backdrop-blur-sm after:z-50 after:rounded-2xl'
+				className='max-w-[1920px] w-full mx-auto overflow-hidden relative before:block before:content-[""] xl:before:w-[105px] 2xl:before:w-[335px] before:h-full before:bg-transparent before:absolute before:top-0 before:-left-1 before:backdrop-blur-sm before:z-[1] before:rounded-2xl after:block after:content-[""] xl:after:w-[105px] 2xl:after:w-[335px] after:h-full after:transparent after:absolute after:top-0 after:-right-1 after:backdrop-blur-sm after:z-[1] after:rounded-2xl'
 			>
 				<CarouselContent className="px-4 sm:px-0">
 					{reviewsData.map((slide) => (

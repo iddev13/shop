@@ -1,4 +1,5 @@
 import { ShopCardType, StyleCardType, ReviewsCardType } from '@/types/cards';
+import { FooterDataType } from '@/types/footer';
 import { NavItemType, SocialLinkType } from '@/types/header';
 import {
 	BadgeDollarSign,
@@ -379,13 +380,13 @@ export const styleData: StyleCardType[] = [
 		href: '/',
 		label: 'Party',
 		imageUrl: '/assets/image/style/12.png',
+		size: 'large',
 	},
 	{
 		id: 4,
 		href: '/',
 		label: 'Gym',
 		imageUrl: '/assets/image/style/13.png',
-		size: 'large',
 	},
 ];
 
@@ -450,5 +451,93 @@ export const reviewsData: ReviewsCardType[] = [
 		author: 'John D.',
 		text: "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
 		rating: 4,
+	},
+];
+
+// Footer Data
+export const footerData: FooterDataType[] = [
+	{
+		title: 'company',
+		items: [
+			{
+				href: '/about',
+				label: 'about',
+			},
+			{
+				href: '/features',
+				label: 'features',
+			},
+			{
+				href: '/works',
+				label: 'works',
+			},
+			{
+				href: '/career',
+				label: 'career',
+			},
+		],
+	},
+	{
+		title: 'help',
+		items: [
+			{
+				href: '/terms',
+				label: 'terms & conditions',
+			},
+			{
+				href: '/support',
+				label: 'support',
+			},
+			{
+				href: '/delivery',
+				label: 'delivery details',
+			},
+			{
+				href: '/privacy',
+				label: 'privacy policy',
+			},
+		],
+	},
+	{
+		title: 'faq',
+		items: [
+			{
+				href: '/account',
+				label: 'account',
+			},
+			{
+				href: '/manage-deliveries',
+				label: 'manage deliveries',
+			},
+			{
+				href: '/orders',
+				label: 'orders',
+			},
+			{
+				href: '/payments',
+				label: 'payments',
+			},
+		],
+	},
+	{
+		title: 'resources',
+		items: [
+			{
+				href: '/ebooks',
+				label: 'free eBooks',
+			},
+			{
+				href: '/development',
+				label: 'development tutorial',
+			},
+			{
+				href: '/blog',
+				label: 'how to - blog',
+			},
+			{
+				href: '/youtube',
+				label: 'youtube playlist',
+			},
+		],
 	},
 ];
