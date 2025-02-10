@@ -20,8 +20,8 @@ export const SubMenuLink = ({
 	return (
 		<div
 			className={cn(
-				'[&_>a]:hover:text-white relative flex items-center justify-between shadow-md hover:bg-primary transition-colors',
-				pathName === href && 'bg-primary  [&_>a]:text-white',
+				'[&_>a]:hover:text-primary-foreground relative flex items-center justify-between shadow-md hover:bg-primary transition-colors',
+				pathName === href && 'bg-primary [&_>a]:text-primary-foreground ',
 				className
 			)}
 		>

@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -16,6 +18,7 @@ type Props = {
 		| 'secondary';
 	size?: 'default' | 'sm' | 'lg' | 'icon';
 	disabled?: boolean;
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 export const Btn = ({
@@ -26,6 +29,7 @@ export const Btn = ({
 	className,
 	type = 'button',
 	disabled = false,
+	onClick,
 }: Props) => {
 	return (
 		<Button
@@ -33,10 +37,12 @@ export const Btn = ({
 			size={size}
 			className={cn(
 				className,
-				!size || (size === 'default' && 'rounded-[70px] px-16 py-6')
+				!size || (size === 'default' && 'rounded-[70px] px-16 py-6'),
+				size === 'sm' && 'rounded-[70px] px-6 py-3'
 			)}
 			type={type}
 			disabled={disabled}
+			onClick={onClick}
 		>
 			{href ? <Link href={href}>{label}</Link> : label}
 		</Button>

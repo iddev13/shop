@@ -1,4 +1,4 @@
-import { Intro } from '@/components/intro';
+import { Intro } from '@/app/(root)/intro';
 import { Arrivals } from './arrivals';
 import { TopSelling } from './top-selling';
 import { Style } from './style';

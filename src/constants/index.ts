@@ -1,6 +1,7 @@
 import { ShopCardType, StyleCardType, ReviewsCardType } from '@/types/cards';
 import { FooterDataType } from '@/types/footer';
 import { NavItemType, SocialLinkType } from '@/types/header';
+import { SizesType } from '@/types/product';
 import {
 	BadgeDollarSign,
 	ChevronsDown,
@@ -25,13 +26,13 @@ export const menuItems: NavItemType[] = [
 		subMenu: [
 			{
 				id: 1,
-				href: '/second-level-1',
-				label: 'second-level-1',
+				href: '/men',
+				label: 'men',
 				subMenu: [
 					{
 						id: 1,
-						href: '/third-level-1',
-						label: 'third-level-1',
+						href: '/t-shirt',
+						label: 'T-shirt',
 					},
 					{
 						id: 2,
@@ -57,13 +58,8 @@ export const menuItems: NavItemType[] = [
 			},
 			{
 				id: 2,
-				href: '/second-level-2',
-				label: 'second-level-2',
-			},
-			{
-				id: 3,
-				href: '/second-level-3',
-				label: 'second-level-3',
+				href: '/woman',
+				label: 'woman',
 			},
 			{
 				id: 4,
@@ -539,5 +535,20 @@ export const footerData: FooterDataType[] = [
 				label: 'youtube playlist',
 			},
 		],
+	},
+];
+
+export const sizes: SizesType[] = [
+	{
+		label: 'small',
+	},
+	{
+		label: 'medium',
+	},
+	{
+		label: 'large',
+	},
+	{
+		label: 'x-large',
 	},
 ];
