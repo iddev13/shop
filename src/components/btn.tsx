@@ -5,6 +5,7 @@ import Link from 'next/link';
 type Props = {
 	href?: string;
 	label: string;
+	type?: 'reset' | 'button' | 'submit';
 	className?: string;
 	variant?:
 		| 'default'
@@ -14,6 +15,7 @@ type Props = {
 		| 'link'
 		| 'secondary';
 	size?: 'default' | 'sm' | 'lg' | 'icon';
+	disabled?: boolean;
 };
 
 export const Btn = ({
@@ -22,6 +24,8 @@ export const Btn = ({
 	size = 'default',
 	label,
 	className,
+	type = 'button',
+	disabled = false,
 }: Props) => {
 	return (
 		<Button
@@ -31,6 +35,8 @@ export const Btn = ({
 				className,
 				!size || (size === 'default' && 'rounded-[70px] px-16 py-6')
 			)}
+			type={type}
+			disabled={disabled}
 		>
 			{href ? <Link href={href}>{label}</Link> : label}
 		</Button>

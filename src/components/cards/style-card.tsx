@@ -26,7 +26,7 @@ export const StyleCard = ({
 						src={imageUrl}
 						alt="Image"
 						fill
-						sizes="(max-width: 768px) 100vw, 33vw"
+						sizes="(max-width: 768px) 85vw, 25vw"
 						className="object-cover"
 					/>
 				</Link>
