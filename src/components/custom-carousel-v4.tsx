@@ -3,7 +3,11 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-import { type CarouselApi } from '@/components/ui/carousel';
+import {
+	CarouselNext,
+	CarouselPrevious,
+	type CarouselApi,
+} from '@/components/ui/carousel';
 import {
 	Carousel,
 	CarouselContent,
@@ -12,49 +16,11 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
-
-type SliderDataType = {
-	id: number;
-	path: string;
-	alt: string;
-};
-
-const sliderData: SliderDataType[] = [
-	{
-		id: 1,
-		path: '/assets/image/shirts/t-shirt1.png',
-		alt: 'Image',
-	},
-	{
-		id: 2,
-		path: '/assets/image/shirts/t-shirt2.png',
-		alt: 'Image',
-	},
-	{
-		id: 3,
-		path: '/assets/image/shirts/t-shirt3.png',
-		alt: 'Image',
-	},
-	{
-		id: 4,
-		path: '/assets/image/shirts/t-shirt1.png',
-		alt: 'Image',
-	},
-	{
-		id: 5,
-		path: '/assets/image/shirts/t-shirt2.png',
-		alt: 'Image',
-	},
-	{
-		id: 6,
-		path: '/assets/image/shirts/t-shirt3.png',
-		alt: 'Image',
-	},
-];
+import { productSliderData } from '@/constants';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export const CustomCarouselV4 = ({ className }: { className?: string }) => {
 	const [api, setApi] = useState<CarouselApi>();
-	const [apiThumb, setApiThumb] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
 
 	useEffect(() => {
@@ -72,70 +38,74 @@ export const CustomCarouselV4 = ({ className }: { className?: string }) => {
 		<div className={cn('', className)}>
 			<div className="flex items-center justify-around">
 				<Carousel
-					setApi={setApiThumb}
-					opts={{ loop: true, align: 'start' }}
+					opts={{ align: 'start' }}
 					orientation="vertical"
-					className="w-[100px] h-[340px] overflow-hidden"
+					className="w-full h-[220px] max-w-[150px] flex flex-col items-center justify-center"
 				>
-					<CarouselContent>
-						{sliderData.map((slide, index) => (
+					<CarouselContent className="-mt-1 h-[200px]">
+						{productSliderData.map((slide, index) => (
 							<CarouselItem
-								className="md:basis-1/2 overflow-hidden rounded-md"
+								className="basis-1/3 overflow-hidden rounded-md"
 								key={slide.id}
 								onClick={() => {
 									api?.scrollTo(index);
 								}}
 							>
-								<Card className="bg-pink-100">
+								<Card>
 									<CardContent className="relative flex flex-col aspect-square items-center justify-center p-6">
-										<Image src={slide.path} alt={slide.alt} fill />
+										<Image src={slide.imageUrl} alt={slide.label} fill />
 										<span className="text-xl font-semibold">{index + 1}</span>
 									</CardContent>
 								</Card>
 							</CarouselItem>
 						))}
 					</CarouselContent>
+					<CarouselPrevious />
+					<CarouselNext />
 				</Carousel>
 				<Carousel
 					setApi={setApi}
 					opts={{ loop: true }}
-					className="w-[250px] h-[330px]"
+					className="w-[444px] h-[530px]"
 				>
 					<CarouselContent>
-						{sliderData.map((slide) => (
+						{productSliderData.map((slide) => (
 							<CarouselItem
-								className="flex items-center justify-center w-[200px] h-[300px] relative overflow-hidden"
+								className="flex items-center justify-center w-full h-[530px] relative overflow-hidden "
 								key={slide.id}
 							>
 								<Image
-									src={slide.path}
-									alt={slide.alt}
+									src={slide.imageUrl}
+									alt={slide.label}
 									fill
 									className="object-contain"
 								/>
 							</CarouselItem>
 						))}
 					</CarouselContent>
-				</Carousel>
-			</div>
-			<div className="flex items-center justify-center gap-x-3 mt-12">
+					<div className="flex items-center justify-center gap-x-4 mt-2 ">
 				<Button
 					onClick={() => {
 						api?.scrollTo(current - 1);
-						apiThumb?.scrollTo(current - 1);
 					}}
+					className="rounded-full w-9 h-9"
+					variant='secondary'
 				>
-					Left
+					<ArrowLeft className="size-4" />
 				</Button>
 				<Button
 					onClick={() => {
 						api?.scrollTo(current + 1);
-						apiThumb?.scrollTo(current + 1);
 					}}
+					className="rounded-full w-9 h-9"
+					variant='secondary'
 				>
-					Right
+					<ArrowRight className="size-4" />
 				</Button>
 			</div>
+				</Carousel>
+			</div>
+		
 		</div>
 	);
 };

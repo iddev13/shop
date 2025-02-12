@@ -4,5 +4,12 @@ export type SizesType = {
 
 export type ColorsType = {
 	label: string;
+	value: string;
 	disabled?: boolean;
+};
+
+export type ProductSliderDataType = {
+	id?: number;
+	label: string;
+	imageUrl: string;
 };

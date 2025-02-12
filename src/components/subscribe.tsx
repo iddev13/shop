@@ -20,7 +20,7 @@ export const Subscribe = ({ className }: Props) => {
 	return (
 		<section
 			className={cn(
-				'max-w-7xl w-full mx-auto rounded-2xl p-46 lg:p-9 flex items-center gap-8 bg-secondary-foreground p-4',
+				'max-w-7xl w-full mx-auto rounded-2xl p-46 lg:p-9 flex items-center flex-col md:flex-row gap-8 bg-secondary-foreground p-4',
 				className
 			)}
 		>

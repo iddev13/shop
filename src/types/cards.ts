@@ -23,4 +23,5 @@ export type ReviewsCardType = {
 	author: string;
 	text: string;
 	date?: string;
+	className?: string;
 };

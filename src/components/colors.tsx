@@ -14,13 +14,10 @@ export const Colors = ({ data }: Props) => {
 					key={elem.label}
 					title={elem.label}
 					disabled={elem.disabled}
+					style={{ backgroundColor: elem.value }}
 					className={cn(
-						'w-9 h-9 rounded-full p-0 inline-block overflow-hidden',
-						elem.disabled && 'opacity-40',
-						elem.label === 'red' && 'bg-rose-500',
-						elem.label === 'pink' && 'bg-pink-500',
-						elem.label === 'green' && 'bg-green-500',
-						elem.label === 'orange' && 'bg-amber-500'
+						'w-9 h-9 rounded-full p-0 inline-block overflow-hidden border',
+						elem.disabled && 'opacity-30'
 					)}
 				/>
 			))}

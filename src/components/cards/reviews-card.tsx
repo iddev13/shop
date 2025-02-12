@@ -5,11 +5,18 @@ import { ReviewsCardType } from '@/types/cards';
 import { Rating } from '@/components/rating';
 import { cn } from '@/lib/utils';
 
-export const ReviewsCard = ({ author, text, rating }: ReviewsCardType) => {
+export const ReviewsCard = ({
+	author,
+	text,
+	rating,
+	date,
+	className,
+}: ReviewsCardType) => {
 	return (
 		<Card
 			className={cn(
-				'max-w-xl w-full h-full sm:h-[242px] py-2 sm:py-6 rounded-2xl'
+				'max-w-[620px] w-full h-full sm:h-[242px] py-2 sm:py-6 rounded-2xl',
+				className
 			)}
 		>
 			<CardContent className="space-y-3 pb-0">
@@ -22,7 +29,10 @@ export const ReviewsCard = ({ author, text, rating }: ReviewsCardType) => {
 						<Check className="size-3 text-white" />
 					</span>
 				</div>
-				<p className="text-sm text-muted-foreground">&quot;{text}&quot;</p>
+				<p className="text-sm text-muted-foreground mb-4 lg:mb-6">
+					&quot;{text}&quot;
+				</p>
+				{date && <p className="text-muted-foreground">{date}</p>}
 			</CardContent>
 		</Card>
 	);

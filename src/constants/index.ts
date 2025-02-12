@@ -1,7 +1,7 @@
 import { ShopCardType, StyleCardType, ReviewsCardType } from '@/types/cards';
 import { FooterDataType } from '@/types/footer';
 import { NavItemType, SocialLinkType } from '@/types/header';
-import { SizesType } from '@/types/product';
+import { ProductSliderDataType, SizesType } from '@/types/product';
 import {
 	BadgeDollarSign,
 	ChevronsDown,
@@ -62,7 +62,12 @@ export const menuItems: NavItemType[] = [
 				label: 'woman',
 			},
 			{
-				id: 4,
+				id: 3,
+				href: '/casual',
+				label: 'casual',
+			},
+			{
+				id: 5,
 				href: '/second-level-4',
 				label: 'second-level-4',
 				subMenu: [
@@ -282,7 +287,7 @@ export const arrivalsSliderData: ShopCardType[] = [
 	},
 ];
 
-// Arrivals section slider data
+// Top selling section slider data
 export const topSellingSliderData: ShopCardType[] = [
 	{
 		id: 1,
@@ -538,6 +543,7 @@ export const footerData: FooterDataType[] = [
 	},
 ];
 
+// Product sizes
 export const sizes: SizesType[] = [
 	{
 		label: 'small',
@@ -550,5 +556,86 @@ export const sizes: SizesType[] = [
 	},
 	{
 		label: 'x-large',
+	},
+];
+
+//
+
+export const productSliderData: ProductSliderDataType[] = [
+	{
+		id: 1,
+		imageUrl: '/assets/image/shirts/t-shirt1.png',
+		label: 'label',
+	},
+	{
+		id: 2,
+		imageUrl: '/assets/image/shirts/t-shirt2.png',
+		label: 'label',
+	},
+	{
+		id: 3,
+		imageUrl: '/assets/image/shirts/t-shirt3.png',
+		label: 'label',
+	},
+	{
+		id: 4,
+		imageUrl: '/assets/image/shirts/1.png',
+		label: 'label',
+	},
+	{
+		id: 5,
+		imageUrl: '/assets/image/shirts/2.png',
+		label: 'label',
+	},
+	{
+		id: 6,
+		imageUrl: '/assets/image/shirts/3.png',
+		label: 'label',
+	},
+];
+
+// Product reviews section Data
+export const productReviewsData: ReviewsCardType[] = [
+	{
+		id: 1,
+		author: 'Samantha D.',
+		text: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+		rating: 4.5,
+		date: 'Posted on August 14, 2023',
+	},
+	{
+		id: 2,
+		author: 'Alex M.',
+		text: "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.",
+		rating: 4,
+		date: 'Posted on August 15, 2023',
+	},
+	{
+		id: 3,
+		author: 'Ethan R.',
+		text: "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+		rating: 3.5,
+		date: 'Posted on August 16, 2023',
+	},
+	{
+		id: 4,
+		author: 'Olivia P.',
+		text: "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+		rating: 4,
+		date: 'Posted on August 17, 2023',
+	},
+	{
+		id: 5,
+		author: 'Liam K.',
+		text: "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+		rating: 4,
+		date: 'Posted on August 18, 2023',
+	},
+	{
+		id: 6,
+		author: 'Ava H.',
+		text: "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
+		rating: 4.5,
+		date: 'Posted on August 19, 2023',
 	},
 ];

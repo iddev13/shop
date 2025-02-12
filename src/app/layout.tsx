@@ -57,7 +57,7 @@ export default function RootLayout({
 					<>
 						<SheetProvider />
 						<Header />
-						<main className="flex-1 pt-20">{children}</main>
+						<main className="flex-1 pt-10 lg:pt-20">{children}</main>
 						<Footer />
 					</>
 				</ThemeProvider>
