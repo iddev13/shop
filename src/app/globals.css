@@ -120,3 +120,4 @@ h1 {
 .github::after {
 	@apply bg-github dark:bg-slate-950;
 }
+

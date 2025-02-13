@@ -1,7 +1,7 @@
 import { ShopCardType, StyleCardType, ReviewsCardType } from '@/types/cards';
 import { FooterDataType } from '@/types/footer';
 import { NavItemType, SocialLinkType } from '@/types/header';
-import { ProductSliderDataType, SizesType } from '@/types/product';
+import { ColorsType, ProductSliderDataType, SizesType } from '@/types/product';
 import {
 	BadgeDollarSign,
 	ChevronsDown,
@@ -543,8 +543,8 @@ export const footerData: FooterDataType[] = [
 	},
 ];
 
-// Product sizes
-export const sizes: SizesType[] = [
+// Product Preview sizes
+export const productPreviewSizes: SizesType[] = [
 	{
 		label: 'small',
 	},
@@ -553,14 +553,40 @@ export const sizes: SizesType[] = [
 	},
 	{
 		label: 'large',
+		isActive: true,
 	},
 	{
 		label: 'x-large',
 	},
 ];
 
-//
+// Product Preview sizes
+export const productSizes: SizesType[] = [
+	{
+		label: 'small',
+	},
+	{
+		label: 'medium',
+	},
+	{
+		label: 'large',
+		isActive: true,
+	},
+	{
+		label: 'x-large',
+	},
+	{
+		label: 'xx-large',
+	},
+	{
+		label: '3x-large',
+	},
+	{
+		label: '4x-large',
+	},
+];
 
+// Product preview slider section Data
 export const productSliderData: ProductSliderDataType[] = [
 	{
 		id: 1,
@@ -638,4 +664,104 @@ export const productReviewsData: ReviewsCardType[] = [
 		rating: 4.5,
 		date: 'Posted on August 19, 2023',
 	},
+];
+
+// Casual data
+export const casualProductsData: ShopCardType[] = [
+	{
+		id: 1,
+		href: '/',
+		imageUrl: '/assets/image/shirts/4.png',
+		title: 'Gradient Graphic T-shirt',
+		rate: 4.5,
+		price: 120,
+	},
+	{
+		id: 2,
+		href: '/',
+		imageUrl: '/assets/image/shirts/5.png',
+		title: 'Polo with Tipping Details',
+		rate: 3.5,
+		price: 240,
+		oldPrice: 260,
+		discount: 20,
+	},
+	{
+		id: 3,
+		href: '/',
+		imageUrl: '/assets/image/shirts/6.png',
+		title: 'Black Striped T-shirt',
+		rate: 4,
+		price: 180,
+	},
+	{
+		id: 4,
+		href: '/',
+		imageUrl: '/assets/image/jeans/1.png',
+		title: 'skinny fit jeans',
+		rate: 4.5,
+		price: 130,
+		oldPrice: 160,
+		discount: 30,
+	},
+	{
+		id: 5,
+		href: '/',
+		imageUrl: '/assets/image/shirts/2.png',
+		title: 'Checkered shirt',
+		rate: 4.5,
+		price: 120,
+	},
+	{
+		id: 6,
+		href: '/',
+		imageUrl: '/assets/image/shirts/3.png',
+		title: 'sleeve striped t-shirt',
+		rate: 3.5,
+		price: 240,
+		oldPrice: 260,
+		discount: 20,
+	},
+	{
+		id: 7,
+		href: '/',
+		imageUrl: '/assets/image/shirts/8.png',
+		title: 'vertical striped shirt',
+		rate: 4,
+		price: 180,
+	},
+	{
+		id: 8,
+		href: '/',
+		imageUrl: '/assets/image/shirts/9.png',
+		title: 'courage graphic t-shirt',
+		rate: 4.5,
+		price: 130,
+		oldPrice: 160,
+		discount: 30,
+	},
+	{
+		id: 9,
+		href: '/',
+		imageUrl: '/assets/image/jeans/2.png',
+		title: 'loose fit bermuda shorts',
+		rate: 4.5,
+		price: 130,
+		oldPrice: 160,
+		discount: 30,
+	},
+];
+
+// Casual Colors data
+export const casualColorsData: ColorsType[] = [
+	{ label: 'green', value: '#00C12B' },
+	{ label: 'red', value: '#F50606' },
+	{ label: 'yellow', value: '#F5DD06' },
+	{ label: 'orange', value: '#F57906' },
+	{ label: 'blue', value: '#06CAF5' },
+	{ label: 'dark-blue', value: '#063AF5', isActive: true },
+	{ label: 'violet', value: '#7D06F5' },
+	{ label: 'pink', value: '#F506A4' },
+	{ label: 'white', value: '#ffffff', isActive: true },
+	{ label: 'black', value: '#000000' },
 ];

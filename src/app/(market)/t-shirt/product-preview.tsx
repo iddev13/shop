@@ -7,9 +7,9 @@ import { CustomCarouselV4 } from '@/components/custom-carousel-v4';
 import { DiscountBadge } from '@/components/discount-badge';
 import { Price } from '@/components/price';
 import { Rating } from '@/components/rating';
+import { Sizes } from '@/components/sizes';
 import { Separator } from '@/components/ui/separator';
-import { sizes } from '@/constants';
-import { cn } from '@/lib/utils';
+import { productPreviewSizes } from '@/constants';
 
 export const ProductPreview = () => {
 	return (
@@ -36,34 +36,18 @@ export const ProductPreview = () => {
 					<p className="text-muted-foreground mb-4">Select Colors</p>
 					<Colors
 						data={[
-							{ label: 'pink', value: '#bc1888', disabled: true },
-							{ label: 'gray', value: '#c9c4c5' },
+							{ label: 'green', value: '#00C12B' },
+							{ label: 'dark-blue', value: '#063AF5' },
+							{ label: 'violet', value: '#7D06F5' },
+							{ label: 'pink', value: '#F506A4', disabled: true },
 							{ label: 'white', value: '#ffffff' },
 							{ label: 'black', value: '#000000' },
-							{ label: 'green', value: '#00bd00' },
-							{ label: 'olive', value: '#344200' },
 						]}
 					/>
 				</div>
 				<Separator className="mb-6" />
 				<p className="text-muted-foreground mb-4">Choose Size</p>
-				<div className="mb-6 flex items-center flex-wrap gap-2">
-					{sizes.map((size) => (
-						<Btn
-							key={size.label}
-							label={size.label}
-							variant="secondary"
-							size="sm"
-							className={cn(
-								'hover:bg-primary hover:text-primary-foreground capitalize',
-								size.label === 'large' && 'bg-primary text-primary-foreground'
-							)}
-							onClick={(e) => {
-								console.log(e);
-							}}
-						/>
-					))}
-				</div>
+				<Sizes data={productPreviewSizes} />
 				<Separator className="mb-6" />
 				<div className="flex items-center justify-between">
 					<Amount />
