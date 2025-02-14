@@ -7,6 +7,7 @@ export type ShopCardType = {
 	price: number;
 	oldPrice?: number;
 	discount?: number;
+	className?: string;
 };
 
 export type StyleCardType = {

@@ -20,7 +20,7 @@ export function AppPagination({ className }: Props) {
 				<PaginationItem>
 					<PaginationPrevious href="#" />
 				</PaginationItem>
-				<div className="flex items-center gap-2">
+				<div className="items-center gap-2 hidden md:flex">
 					<PaginationItem>
 						<PaginationLink href="#">1</PaginationLink>
 					</PaginationItem>

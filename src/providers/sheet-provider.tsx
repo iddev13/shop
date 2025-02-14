@@ -3,6 +3,7 @@
 import { useMountedState } from 'react-use';
 
 import { MobileNavSheet } from '@/components/header/mobile-nav-sheet';
+import { FiltersSheet } from '@/components/filters-sheet';
 
 export const SheetProvider = () => {
 	const isMounted = useMountedState();
@@ -12,6 +13,8 @@ export const SheetProvider = () => {
 	return (
 		<>
 			<MobileNavSheet />
+
+			<FiltersSheet />
 		</>
 	);
 };

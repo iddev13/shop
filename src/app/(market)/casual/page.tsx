@@ -8,8 +8,8 @@ const CasualPage = () => {
 			<div className="mb-4">
 				<CasualBreadcrumbs />
 			</div>
-			<div className="flex items-start gap-x-5 mb-12">
-				<CasualAside />
+			<div className="flex items-start lg:gap-x-5 mb-12">
+				<CasualAside className="hidden lg:block" />
 				<CasualProducts />
 			</div>
 		</div>

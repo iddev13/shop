@@ -16,14 +16,24 @@ import { casualColorsData, productSizes } from '@/constants';
 import { PriceSlider } from '@/components/price-slider';
 import { StyleAccordion } from './style-accordion';
 import { CategoryAccordion } from './category-accordion';
+import { cn } from '@/lib/utils';
 
-export const CasualAside = () => {
+type Props = {
+	className?: string;
+};
+
+export const CasualAside = ({ className }: Props) => {
 	const handlePriceChange = (newRange: [number, number]) => {
 		console.log(`Price range selected: $${newRange[0]} - $${newRange[1]}`);
 	};
 
 	return (
-		<aside className="w-[295px] border rounded-2xl p-4 space-y-4">
+		<aside
+			className={cn(
+				'w-[295px] border rounded-2xl p-4 space-y-4',
+				className
+			)}
+		>
 			<div className="flex items-center justify-between">
 				<h2 className="text-xl font-bold">Filters</h2>
 				<Filter className="size-4 opacity-80" />

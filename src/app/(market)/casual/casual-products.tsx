@@ -10,15 +10,17 @@ import {
 	SelectValue,
 } from '@/components/ui/select';
 import { casualProductsData } from '@/constants';
+import FiltersBtn from './filters-btn';
 
 export const CasualProducts = () => {
 	return (
-		<div>
-			<div className="flex items-end justify-between mb-4">
+		<div className="w-full">
+			<div className="flex items-center lg:items-end justify-between mb-4 gap-2">
 				<h1 className="text-xl lg:text-3xl flex-auto">Casual</h1>
-				<div className="flex items-center gap-2">
+				<div className="flex items-center flex-wrap gap-2 lg:flex-nowrap">
 					<div className="flex items-center gap-2 whitespace-nowrap text-sm text-muted-foreground">
 						{/* TODO: Add showing amount and all amount  */}
+						<FiltersBtn />
 						<span>Showing 1-10 of 100 Products</span>
 						<span>Sort by:</span>
 					</div>
@@ -39,7 +41,7 @@ export const CasualProducts = () => {
 					</Select>
 				</div>
 			</div>
-			<div className="grid grid-cols-3 gap-x-5 gap-y-9 mb-4 pb-6 border-b">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-9 mb-4 pb-6 border-b">
 				{casualProductsData.map((card) => (
 					<ShopCard
 						key={card.id}
@@ -50,6 +52,7 @@ export const CasualProducts = () => {
 						title={card.title}
 						rate={card.rate}
 						discount={card.discount}
+						className="max-w-[350px] w-full mx-auto"
 					/>
 				))}
 			</div>

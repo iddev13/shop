@@ -6,6 +6,7 @@ import { Rating } from '@/components/rating';
 import { DiscountBadge } from '@/components/discount-badge';
 import { Card, CardContent, CardFooter, CardTitle } from '@/components/ui/card';
 import { ShopCardType } from '@/types/cards';
+import { cn } from '@/lib/utils';
 
 export const ShopCard = ({
 	href,
@@ -15,9 +16,15 @@ export const ShopCard = ({
 	oldPrice,
 	discount,
 	rate,
+	className,
 }: ShopCardType) => {
 	return (
-		<Card className="border-none shadow-none">
+		<Card
+			className={cn(
+				'border-none shadow-none flex flex-col items-center',
+				className
+			)}
+		>
 			<CardContent className="p-0 relative w-[198px] h-[200px] xl:w-[295px] xl:h-[298px] bg-secondary rounded-3xl overflow-hidden mb-4">
 				<Link href={href}>
 					<Image
@@ -29,7 +36,7 @@ export const ShopCard = ({
 					/>
 				</Link>
 			</CardContent>
-			<CardFooter className="p-0 space-y-2 flex flex-col items-start">
+			<CardFooter className="w-full py-0 lg:px-2 space-y-2 flex flex-col items-start">
 				<CardTitle className="capitalize">
 					<Link href={href}>{title}</Link>
 				</CardTitle>
