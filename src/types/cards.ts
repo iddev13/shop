@@ -26,3 +26,16 @@ export type ReviewsCardType = {
 	date?: string;
 	className?: string;
 };
+
+export type CartCardType = {
+	id?: number;
+	href: string;
+	imageUrl: string;
+	title: string;
+	size: string;
+	color: string;
+	price: number;
+	amount: number;
+	discount?: number;
+	className?: string;
+};

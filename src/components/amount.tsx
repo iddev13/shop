@@ -14,7 +14,7 @@ export const Amount = ({ value }: Props) => {
 	}, [value]);
 
 	return (
-		<div className="flex items-center justify-between gap-x-2 bg-secondary w-40 rounded-3xl p-2">
+		<div className="flex items-center justify-between lg:gap-x-2 bg-secondary w-fit rounded-3xl md:p-2">
 			<Button
 				variant="secondary"
 				size="icon"

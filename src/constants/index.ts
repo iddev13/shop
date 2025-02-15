@@ -1,4 +1,9 @@
-import { ShopCardType, StyleCardType, ReviewsCardType } from '@/types/cards';
+import {
+	ShopCardType,
+	StyleCardType,
+	ReviewsCardType,
+	CartCardType,
+} from '@/types/cards';
 import { FooterDataType } from '@/types/footer';
 import { NavItemType, SocialLinkType } from '@/types/header';
 import { ColorsType, ProductSliderDataType, SizesType } from '@/types/product';
@@ -764,4 +769,38 @@ export const casualColorsData: ColorsType[] = [
 	{ label: 'pink', value: '#F506A4' },
 	{ label: 'white', value: '#ffffff', isActive: true },
 	{ label: 'black', value: '#000000' },
+];
+
+// Cart cards data
+export const cartCardsData: CartCardType[] = [
+	{
+		id: 1,
+		href: '/',
+		imageUrl: '/assets/image/shirts/4.png',
+		title: 'Gradient Graphic T-shirt',
+		size: 'large',
+		color: 'white',
+		price: 145,
+		amount: 1,
+	},
+	{
+		id: 2,
+		href: '/',
+		imageUrl: '/assets/image/shirts/2.png',
+		title: 'checkered shirt',
+		size: 'medium',
+		color: 'red',
+		price: 180,
+		amount: 1,
+	},
+	{
+		id: 3,
+		href: '/',
+		imageUrl: '/assets/image/jeans/1.png',
+		title: 'skinny fit jeans',
+		size: 'large',
+		color: 'blue',
+		price: 240,
+		amount: 1,
+	},
 ];
