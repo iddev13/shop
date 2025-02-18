@@ -20,15 +20,15 @@ export const SubMenuLink = ({
 	return (
 		<div
 			className={cn(
-				'[&_>a]:hover:text-primary-foreground relative flex items-center justify-between shadow-md hover:bg-primary transition-colors',
-				pathName === href && 'bg-primary [&_>a]:text-primary-foreground ',
+				'[&_>a]:hover:text-primary-foreground lg:bg-secondary relative flex items-center justify-between  hover:bg-primary transition-colors',
+				pathName === href && 'bg-primary [&_>a]:text-primary-foreground',
 				className
 			)}
 		>
 			<Link
 				href={href}
 				className={cn(
-					'relative flex items-center min-h-[48px] capitalize text-sm overflow-hidden flex-auto px-2'
+					'relative flex items-center min-h-[48px] lg:shadow-inner lg:dark:shadow-secondary-foreground/20 capitalize text-sm overflow-hidden flex-auto px-2'
 				)}
 				onClick={(e) => {
 					pulseBtnFunc(e);

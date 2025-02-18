@@ -1,9 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ProductReviews } from './product-reviews';
+import { ProductDescription } from './product-description';
 
 export const ProductTabs = () => {
 	return (
-		<Tabs defaultValue="rating">
+		<Tabs defaultValue="rating" className="mb-6 lg:mb-10">
 			<TabsList className="w-full flex bg-transparent">
 				<TabsTrigger
 					value="details"
@@ -24,11 +25,13 @@ export const ProductTabs = () => {
 					FAQs
 				</TabsTrigger>
 			</TabsList>
-			<TabsContent value="details">DETAILS</TabsContent>
+			<TabsContent value="details">
+				<ProductDescription />
+			</TabsContent>
 			<TabsContent value="rating">
 				<ProductReviews />
 			</TabsContent>
-			<TabsContent value="faqs">faqs</TabsContent>
+			<TabsContent value="faqs">Product question form</TabsContent>
 		</Tabs>
 	);
 };

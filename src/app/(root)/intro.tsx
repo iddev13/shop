@@ -22,11 +22,14 @@ export const Intro = () => {
 					<Btn label="Shop now" href="/shop" />
 					<div className="flex flex-wrap flex-shrink-0 justify-center gap-3 md:gap-8">
 						<Counter text="International Brands" value={200} />
-						<Separator orientation="vertical" className="h-[74px] w-[1px]" />
+						<Separator
+							orientation="vertical"
+							className="hidden sm:block h-[74px] w-[1px] dark:bg-primary/20"
+						/>
 						<Counter text="High-Quality Products" value={2000} />
 						<Separator
 							orientation="vertical"
-							className="hidden sm:block h-[74px] w-[1px]"
+							className="hidden sm:block h-[74px] w-[1px] dark:bg-primary/20"
 						/>
 						<Counter text="Happy Customers" value={30000} />
 					</div>
