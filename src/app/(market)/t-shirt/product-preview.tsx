@@ -1,5 +1,8 @@
 'use client';
 
+import { useMedia } from 'react-use';
+import { Heart, ShoppingBasket } from 'lucide-react';
+
 import { Amount } from '@/components/amount';
 import { Btn } from '@/components/btn';
 import { Colors } from '@/components/colors';
@@ -12,6 +15,7 @@ import { Separator } from '@/components/ui/separator';
 import { productPreviewSizes } from '@/constants';
 
 export const ProductPreview = () => {
+	const isMobile = useMedia('(max-width: 1024px)');
 	return (
 		<div className="flex flex-col lg:flex-row gap-4 mb-12 lg:mb-20">
 			<div className="basis-1/2 flex-shrink-0 mb-12 lg:mb-0">
@@ -51,7 +55,14 @@ export const ProductPreview = () => {
 				<Separator className="mb-6" />
 				<div className="flex items-center justify-between">
 					<Amount />
-					<Btn label="Add to Cart" />
+					<div className="flex items-center gap-2">
+						<Btn label="Add to Wishlist" hideTextMobile>
+							<Heart />
+						</Btn>
+						<Btn label="Add to Cart" hideTextMobile={isMobile}>
+							<ShoppingBasket />
+						</Btn>
+					</div>
 				</div>
 			</div>
 		</div>

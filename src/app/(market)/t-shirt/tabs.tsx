@@ -1,10 +1,11 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ProductReviews } from './product-reviews';
 import { ProductDescription } from './product-description';
+import { ProductReviewForm } from '@/components/forms/product-review-form';
 
 export const ProductTabs = () => {
 	return (
-		<Tabs defaultValue="rating" className="mb-6 lg:mb-10">
+		<Tabs defaultValue="faqs" className="mb-6 lg:mb-10">
 			<TabsList className="w-full flex bg-transparent">
 				<TabsTrigger
 					value="details"
@@ -25,13 +26,15 @@ export const ProductTabs = () => {
 					FAQs
 				</TabsTrigger>
 			</TabsList>
-			<TabsContent value="details">
+			<TabsContent value="details" className="mb-12">
 				<ProductDescription />
 			</TabsContent>
 			<TabsContent value="rating">
 				<ProductReviews />
 			</TabsContent>
-			<TabsContent value="faqs">Product question form</TabsContent>
+			<TabsContent value="faqs" className="mb-12">
+				<ProductReviewForm />
+			</TabsContent>
 		</Tabs>
 	);
 };

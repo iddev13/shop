@@ -27,14 +27,14 @@ import { Button } from '@/components/ui/button';
 export const ProductReviews = () => {
 	const isMobile = useMedia('(max-width: 1024px)');
 	return (
-		<div>
+		<section>
 			<div className="flex items-center justify-between py-4">
-				<h2 className="text-2xl font-bold">
+				<h1 className="text-2xl font-bold font-satoshi">
 					All reviews&nbsp;
 					<span className="text-xs text-muted-foreground font-normal">
 						(451)
 					</span>
-				</h2>
+				</h1>
 				<div className="flex items-center gap-x-2">
 					<div>
 						{/* TODO: Add reviews filter */}
@@ -98,6 +98,6 @@ export const ProductReviews = () => {
 					{isMobile && <CustomCarouselV2 data={arrivalsSliderData} />}
 				</>
 			</Section>
-		</div>
+		</section>
 	);
 };

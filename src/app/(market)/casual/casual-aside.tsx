@@ -17,6 +17,7 @@ import { PriceSlider } from '@/components/price-slider';
 import { StyleAccordion } from './style-accordion';
 import { CategoryAccordion } from './category-accordion';
 import { cn } from '@/lib/utils';
+import { Brands } from './brands';
 
 type Props = {
 	className?: string;
@@ -29,10 +30,7 @@ export const CasualAside = ({ className }: Props) => {
 
 	return (
 		<aside
-			className={cn(
-				'w-[295px] border rounded-2xl p-4 space-y-4',
-				className
-			)}
+			className={cn('w-[295px] border rounded-2xl p-4 space-y-4', className)}
 		>
 			<div className="flex items-center justify-between">
 				<h2 className="text-xl font-bold">Filters</h2>
@@ -57,8 +55,17 @@ export const CasualAside = ({ className }: Props) => {
 						/>
 					</AccordionContent>
 				</AccordionItem>
-				{/* Colors */}
+				{/* Brands */}
 				<AccordionItem value="item-2">
+					<AccordionTrigger className="text-xl font-bold hover:text-primary hover:no-underline">
+						Brands
+					</AccordionTrigger>
+					<AccordionContent>
+						<Brands />
+					</AccordionContent>
+				</AccordionItem>
+				{/* Colors */}
+				<AccordionItem value="item-3">
 					<AccordionTrigger className="text-xl font-bold hover:text-primary hover:no-underline">
 						Colors
 					</AccordionTrigger>
@@ -67,7 +74,7 @@ export const CasualAside = ({ className }: Props) => {
 					</AccordionContent>
 				</AccordionItem>
 				{/* Size */}
-				<AccordionItem value="item-3">
+				<AccordionItem value="item-4">
 					<AccordionTrigger className="text-xl font-bold hover:text-primary hover:no-underline">
 						Size
 					</AccordionTrigger>
@@ -76,7 +83,7 @@ export const CasualAside = ({ className }: Props) => {
 					</AccordionContent>
 				</AccordionItem>
 				{/* Dress Style: Casual, Formal, Party... */}
-				<AccordionItem value="item-4" className="mb-6">
+				<AccordionItem value="item-5" className="mb-6">
 					<StyleAccordion />
 				</AccordionItem>
 				<Btn label="Apply Filter" />

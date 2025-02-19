@@ -3,8 +3,8 @@
 import { Filter } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import { useOpenFilters } from '@/hooks/use-open-filters';
+import { cn } from '@/lib/utils';
 
 type Props = {
 	className?: string;

@@ -20,7 +20,7 @@ export const CasualProducts = () => {
 				<div className="flex items-center flex-wrap gap-2 lg:flex-nowrap">
 					<div className="flex items-center gap-2 whitespace-nowrap text-sm text-muted-foreground">
 						{/* TODO: Add showing amount and all amount  */}
-						<FiltersBtn />
+						<FiltersBtn className="lg:hidden" />
 						<span>Showing 1-10 of 100 Products</span>
 						<span>Sort by:</span>
 					</div>

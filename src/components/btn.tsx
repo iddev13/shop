@@ -19,6 +19,8 @@ type Props = {
 	size?: 'default' | 'sm' | 'lg' | 'icon';
 	disabled?: boolean;
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	children?: React.ReactNode;
+	hideTextMobile?: boolean;
 };
 
 export const Btn = ({
@@ -30,6 +32,8 @@ export const Btn = ({
 	type = 'button',
 	disabled = false,
 	onClick,
+	hideTextMobile,
+	children,
 }: Props) => {
 	return (
 		<Button
@@ -38,13 +42,18 @@ export const Btn = ({
 			className={cn(
 				className,
 				!size || (size === 'default' && 'rounded-[70px] px-16 py-6'),
-				size === 'sm' && 'rounded-[70px] px-6 py-3'
+				size === 'sm' && 'rounded-[70px] px-6 py-3',
+				hideTextMobile && 'w-8 h-8 md:w-12 md:h-12 p-0 flex-shrink-0'
 			)}
 			type={type}
 			disabled={disabled}
 			onClick={onClick}
+			title={label}
 		>
-			{href ? <Link href={href}>{label}</Link> : label}
+			<>
+				{children}
+				{href ? <Link href={href}>{label}</Link> : !hideTextMobile && label}
+			</>
 		</Button>
 	);
 };
